@@ -1,0 +1,192 @@
+@font-face {
+    font-family: vazir;
+    src: url(/fonts/Vazirmatn[wght].woff2);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+    :root {
+        --Purple:#270257;
+        --Yellow:#feb100;
+        --Black:#000000;
+        --White:#ffffff;
+        --NAv-button:rgba(255,255,255,0.05);
+        --Nav-hover:rgba(255,255,255,0.1);
+    
+    }
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "vazir",Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 1.5rem;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background: url(/image/restaurant/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu h1{
+    background-color: var(--Yellow);
+    color: var(--White);
+    
+}
+.menu{
+    background-color: var(--Yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.menu-item{
+        background-color: var(--Yellow);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        
+    }
+
+
+
+.menu-item img{
+    width: 80%;
+    margin-bottom: 20px;
+    transition: all ease 1s;
+    height: 30rem;
+    margin: auto;
+    border-radius: 2rem;
+    margin-bottom:-5rem;
+}
+.text-box{
+    position: relative;
+    text-align: center;
+    color: var(--Purple);
+    background-color: var(--White);
+    border-radius: 3rem;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+    height: 10rem;
+    padding: 1rem;
+   
+}
+
+.menu-item a{
+    display: grid;
+    padding-top: 10px;
+    color: #0067b8;
+}
+.menu-item img:hover{
+    opacity: 0.5;
+}
+
+.button{
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    margin-bottom: 1rem;
+}
+.button:hover{
+    background-color: var(--White);
+}
+.header .button{
+    margin-bottom: 2rem;
+}
+.button-yellow{
+    background-color: var(--Yellow);
+    color: var(--Purple);
+}
+.button-purple{
+    background-color: var(--Purple);
+    color: var(--White);
+}
+.button-purple:hover{
+    color: var(--Black);
+}
+.purple{
+    color: var(--Purple);
+}
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.logo{
+    width: 30rem;
+}
+.nav-item{
+    text-decoration: none;
+    color: var(--White);
+    background-color: var(--NAv-button);
+    margin: 0.5rem;
+    font-size: 2rem;
+    padding: .5rem 1rem;    
+    border-radius: .5rem;
+    transition: .2s ease-in-out;
+}
+.nav-item:hover{
+    background-color: var(--Nav-hover);
+    transform: translateY(0.2rem);
+}
+
+@media only screen and (max-width:950px) {
+    .header {
+        background: url(/image/restaurant/banner-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .nav-bar{
+        flex-direction: column;
+        
+    }
+    .nav-item{
+        width: max-content;
+    }
+    .logo{
+        width: 20rem;
+    }
+    .menu-item{
+        grid-template-columns: repeat(2,1fr);    
+
+    }
+    .text-box{
+        width: 80%;
+        margin: auto;
+    }
+    .menu-item img{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:550px){
+    .menu-item{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .menu-item img{
+        width: 65%;
+        margin: auto;
+    }
+    .text-box{
+        width: 65%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,56 @@
+.header,.nav{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    justify-content: space-between;
+}
+.nav{
+    flex: 1;
+    justify-content: space-around;
+}
+@media all and (min-width:650px) {
+    .header,.nav{
+    flex-direction: row;
+    }
+}
+@media all and (min-width:1060px) {
+    .nav{
+        flex :none;
+    }
+}
+body{
+    margin: 0;
+    background: url(/image/TM-AW24_header_flats.jpg) top center no-repeat;
+    background-size: cover;
+}
+.header{
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.logo{
+    width: 80px;
+    border-radius: 70px;
+}
+.nav{
+    list-style: none;
+}
+.nav li{
+    margin: 12px 0 10px 30px;
+    color: black;
+    transition:all ease .2s;
+}
+.nav li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-right: 40px;
+}
+.nav li a:hover{
+    color: rgb(180, 184, 192);
+
+}
+.nav li:hover{
+    transform: scale(1.07);
+
+}
