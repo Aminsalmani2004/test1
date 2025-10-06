@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/indexdb.css">
+  <title>فرم ثبت کاربر با IndexedDB</title>
+</head>
+<body>
+  <div class="container">
+    <h2>فرم ثبت کاربر</h2>
+
+    <form id="userForm">
+      <label for="id">نام کاربری :</label>
+      <input id="id" required>
+
+      <label for="name">نام:</label>
+      <input type="text" id="name" required>
+
+      <label for="age">سن:</label>
+      <input id="age" required>
+
+      <button type="submit">ثبت اطلاعات</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="/js/indexdb.js"></script>
+</body>
+</html>
